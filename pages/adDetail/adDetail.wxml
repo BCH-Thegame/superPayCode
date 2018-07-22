@@ -1,0 +1,15 @@
+<view class="ad">
+    <view class='bline'>
+        <view class='ad-title'>
+            Hash value
+        </view>
+        <view class='ad-value'>1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK</view>
+    </view>
+    <view>
+        <view class='ad-title'>
+        Remarks
+        </view>
+        <view class='ad-text'>1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK</view>
+    </view>
+
+</view>

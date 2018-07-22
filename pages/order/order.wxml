@@ -1,0 +1,46 @@
+<view class='o-tab' bindtap='tabToggle'>
+    <view id="{{index}}" wx:key="tabs" wx:for="{{['全部','收入','支出']}}" class='{{currTab == index ? "active":""}}'>
+        {{item}}
+    </view>
+</view>
+<scroll-view scroll-y class='o-scroll'>
+    <view class='o-list'>
+        <view class='bline o-item list-arr'  bindtap='toDetail' id="r" data-index="{{index}}" wx:for="{{order}}" wx:if="{{currTab == 0}}">
+            <view class='o-ps'>
+                <view class='o-price {{item.category == "send" ? "o-price-out" :""}}'>
+                    {{item.category != 'send'? "+" : ""}}{{item.amount}}
+                    <text>BCH</text>
+                </view>
+                <view class='o-mark'>{{item.category == 'send' ? "支出" : "收入"}}</view>
+                <view class='o-date'>{{item.timereceived_conv}}</view>
+                <view class='o-hax'>{{item.to_add}}</view>
+            </view>
+        </view>
+
+        <view class='bline o-item list-arr'  bindtap='toDetail' data-index="{{index}}" wx:for="{{order}}" wx:if="{{currTab == 1 && item.category!= 'send'}}">
+            <view class='o-ps'>
+                <view class='o-price {{item.category == "send" ? "o-price-out" :""}}'>
+                    {{item.category != 'send'? "+" : ""}}{{item.amount}}
+                    <text>BCH</text>
+                </view>
+                <view class='o-mark'>{{item.category == 'send' ? "支出" : "收入"}}</view>
+                <view class='o-date'>{{item.timereceived_conv}}</view>
+                <view class='o-hax'>{{item.to_add}}</view>
+            </view>
+        </view>
+
+        <view class='bline o-item list-arr'  bindtap='toDetail' data-index="{{index}}" wx:for="{{order}}" wx:if="{{currTab == 2 && item.category == 'send'}}">
+            <view class='o-ps'>
+                <view class='o-price {{item.category == "send" ? "o-price-out" :""}}'>
+                    {{item.category != 'send'? "+" : ""}}{{item.amount}}
+                    <text>BCH</text>
+                </view>
+                <view class='o-mark'>{{item.category == 'send' ? "支出" : "收入"}}</view>
+                <view class='o-date'>{{item.timereceived_conv}}</view>
+                <view class='o-hax'>{{item.to_add}}</view>
+            </view>
+        </view>
+    </view>
+
+
+</scroll-view>

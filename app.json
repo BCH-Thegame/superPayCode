@@ -1,0 +1,46 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/pos/pos",
+        "pages/member/member",
+        "pages/bao/bao",
+        "pages/bonus/bonus",
+        "pages/order/order",
+        "pages/adDetail/adDetail",
+        "pages/pay/pay",
+        "pages/orderDetail/orderDetail",
+        "pages/creatWallet/creatWallet",
+        "pages/wallet/wallet"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#313541",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "withe"
+    },
+    "tabBar": {
+        "backgroundColor": "#313541",
+        "color": "#E9EAF6",
+        "selectedColor": "#ffffff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "Pay BCH",
+                "iconPath": "images/pay.png",
+                "selectedIconPath": "images/pay-sel.png"
+            },
+            {
+                "pagePath": "pages/bonus/bonus",
+                "text": "Bonus",
+                "iconPath": "images/bao.png",
+                "selectedIconPath": "images/bao-sel.png"
+            },
+            {
+                "pagePath": "pages/member/member",
+                "text": "Wallet",
+                "iconPath": "images/member.png",
+                "selectedIconPath": "images/member-sel.png"
+            }
+        ]
+    }
+}

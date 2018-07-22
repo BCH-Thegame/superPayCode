@@ -1,0 +1,35 @@
+<block wx:if="{{!pwd}}">
+    <view class='c-setpas'>
+        <view class='c-title'>请设置交易密码</view>
+        <view class='c-inputs'>
+            <view class='input-block' wx:for="{{pwdInput}}" data-index="{{index}}">{{item}}</view>
+            <input bindinput='passInput' class='passinput' type='number' maxlength='6' confirm-type="next" placeholder-class='input-pro'></input>
+
+        </view>
+    </view>
+</block>
+<block wx:elif="{{isReg}}">
+    <view class='m-wallet'>
+        <view class='m-list'>
+            <view class='bline m-money'>
+                钱包余额
+                <view class='b-price'>{{amount}} <text>BCH</text></view>
+            </view>
+            <view class='m-address bline'>我的钱包地址：
+                <view class='m-address-code'> {{address.address}} </view>
+            </view>
+        </view>
+        <view class='qrcode'>
+            <canvas style="width:{{qrSize}}px;height:{{qrSize}}px" canvas-id="qrcodecav" />
+        </view>
+        <view class="m-copy" bindtap='copyAddress' hover-class='m-copy-touch'>复制收款地址</view>
+    </view>
+</block>
+<block wx:else>
+    <view class='c-creat'>
+        <form bindsubmit='creatWallet'>
+            <input type='text' placeholder='请输入钱包名称' name="walletName"></input>
+            <button class='button' hover-class="button-touch" form-type='submit'>创建</button>
+        </form>
+    </view>
+</block>
