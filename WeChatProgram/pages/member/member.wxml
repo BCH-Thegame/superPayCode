@@ -1,0 +1,42 @@
+<block wx:if="{{!userInfo}}">
+    <button open-type="getUserInfo">获取用户信息</button>
+</block>
+<block wx:else>
+    <view class='m-head'>
+        <view class='m-img'>
+            <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class='m-name'>
+            <open-data type="userNickName"></open-data>
+        </view>
+    </view>
+    <view class='m-list'>
+        <view class='bline'>
+            <view class='ico icon-bag'></view> Balance
+            <view class='m-list-value m-price'>
+                {{amount || 0}}
+                <text>BCH</text>
+            </view>
+        </view>
+        <view class='bline' bindtap='toOderDetail'>
+            <view class='ico icon-order'></view>Transactions
+            <view class='m-list-value'>
+                
+            </view>
+        </view>
+        <view bindtap='creatWallet' class='bline'>
+            <view class='ico icon-money'></view>BCH Wallet
+            <view class='m-list-value'>{{!isReg ? "Add Wallet":"view"}}</view>
+        </view>
+        <view class='bline'>
+            <view class='ico icon-star'></view>B-Bao Cumulative Income
+            <view class='m-list-value m-price'>23.999
+                <text>BCH</text>
+            </view>
+        </view>
+        <view class='bline'>
+            <view class='ico icon-setting'></view>Pay Setting
+            <view class='m-list-value'></view>
+        </view>
+    </view>
+</block>

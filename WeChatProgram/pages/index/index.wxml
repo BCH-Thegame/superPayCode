@@ -1,0 +1,49 @@
+<view class="p-head">
+    <view bindtap='scanPay'>
+        <view class='ico icon-scan'></view>
+        <text>{{en?"Scan":"收款"}}</text>
+    </view>
+    <view bindtap='toWallet'>
+        <view class='ico icon-paycode'></view>
+        <text>{{en?"Collect":"付款码"}}</text>
+    </view>
+    <view bindtap='toPayment'>
+        <view class='ico icon-getcode'></view>
+        <text>{{en?"Pay":"收款码"}}</text>
+    </view>
+</view>
+
+<view class='p-list'>
+    <view class='bline list-arr'>
+        <view class='p-list-title'>Balance</view>
+        <view class='p-price'>
+            <view class='p-price-name'> {{amount || 0}}
+                <text>BCH</text>
+            </view>
+            <view> ≈¥392934.00
+                <text>RMB</text>
+            </view>
+        </view>
+    </view>
+    <view class='list-arr'>
+        <view class='p-list-title'>B-Bao Cumulative Income</view>
+        <view class='p-price'>
+            <view class='p-price-name'> {{amount || 0}}
+                <text>BCH</text>
+            </view>
+            <view> ≈392934.00
+                <text>RMB</text>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class='ad-list'>
+    <view class='ad-item ad-item-left' bindtap='adDetail' hover-class='ad-item-touch'>
+        <text>1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK
+    </text>
+    </view>
+    <view class='ad-item   ad-item-left'  bindtap='adDetail'  hover-class='ad-item-touch'><text> 1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK1HHzeP6yzugKseSFNHxLVN3kU73vUahaVK</text></view>
+
+    <view class='ad-button' bindtap='toPay' hover-class='ad-button-touch'>Leave your thoughts forever</view>
+</view>

@@ -1,0 +1,73 @@
+.o-item{
+    display: flex;
+    padding:30rpx 40rpx;
+    align-items:center;
+    justify-content:space-between;
+}
+.o-tab{
+    display: flex;
+    flex-wrap:wrap;
+    height:110rpx;
+    box-shadow:0 4px 10px rgba(50,50,50,.2);
+}
+.o-tab>view{
+    text-align:center;
+    padding:0 0;
+    flex-basis:33.33333333333%;
+    height:110rpx;
+    line-height:110rpx;
+    font-size:30rpx;
+    box-sizing:border-box;
+    border-bottom:4px solid transparent;
+    font-weight:800;
+    
+}
+.o-tab>view.active{
+    border-bottom:4px solid #24B53E;
+    color:#24B53E;
+}
+.o-date{
+    color:#989AA0;
+    font-size:24rpx;
+    margin-top:20rpx;
+}
+.o-scroll{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:98rpx;
+}
+.o-hax{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:100%;
+    font-size:24rpx;
+    color:#989AA0;
+}
+.o-price{
+    color:#24B53E;
+    font-weight:800;
+}
+.o-price text{
+    font-size:24rpx;
+}
+.o-price-out{
+    color:#F65F2F;
+}
+.o-mark{
+    padding:6rpx 18rpx;
+    color:#5A5D67;
+    background:#eee;
+    text-align:center;
+    font-size:24rpx;
+  display:inline-block;
+    border-radius:4rpx;
+}
+
+.o-ps{
+    flex-grow: 2;
+    padding:10rpx 15rpx;
+   
+}

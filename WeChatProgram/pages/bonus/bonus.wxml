@@ -1,0 +1,20 @@
+<view class='b-block'>
+    <view class='b-time'>
+        <view class='b-down'>countDown <view>{{timemsg}}</view></view>
+    </view>
+    <view class='b-col'>
+        <view>{{bonus}} <view>BCH Bonus Pool</view></view>
+        <view>{{bonuspeo}} <view> Joined</view></view>
+    </view>
+    <view class='b-rule'>
+        <view class='b-rules-title'>Sweepstakes rules</view>
+        <view>A%B = x</view>
+    <view> x:Tht xth participant wins</view>
+        <view>A:BCH real-time price</view>
+    <view> B:Real-time paticipants’number</view>
+        <view>If x=0 ,make x= 1</view>
+    </view>
+</view>
+<view  class='b-play' id="bonus" bindtap='toPay' hover-class='b-play-touch'>
+ Pay 1 BCH won 80% BCH Bouns Pool
+</view>
