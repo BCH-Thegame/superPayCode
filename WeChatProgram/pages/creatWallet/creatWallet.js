@@ -6,11 +6,7 @@ Page({
         pwd: true,
         pwdInput: ['', '', '', '', '', '']
     },
-
-    onLoad: function(options) {
-        wx.setNavigationBarTitle({
-            title: 'BCH Wallet',
-        })
+    resWallet: function() {
         try {
             if (wx.getStorageSync("address")) {
                 console.log("addres")
@@ -29,6 +25,12 @@ Page({
         } catch (error) {
 
         }
+    },
+    onLoad: function(options) {
+        wx.setNavigationBarTitle({
+            title: 'BCH Wallet',
+        })
+        this.resWallet()
     },
     copyAddress: function(e) {
         wx.setClipboardData({
@@ -57,19 +59,32 @@ Page({
             pwdInput: pwdInput
         })
     },
+
     creatWallet: function(e) {
         console.log(e)
         wx.setStorageSync("walletName", e.detail.value.walletName)
+        if (e.detail.value.walletName != ''){
         var openId = Date.parse(new Date());
-        let parmas = { "apiKey": "0000", "params": { "account": "" + openId + "" } }
+        let parmas = {
+            "apiKey": "0000",
+            "params": {
+                "account": "" + openId + ""
+            }
+        }
         api.newaddress(parmas)
             .then(res => {
-                console.log("address::", res)
                 wx.setStorageSync("address", res.data)
+                this.resWallet()
                 this.setData({
                     isReg: true
                 })
             })
+        }else{
+            wx.showToast({
+                title: 'must not be null',
+                icon:'none'
+            })
+        }
     },
     onReady: function() {
         // 请求地址

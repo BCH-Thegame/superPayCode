@@ -20,7 +20,7 @@
             <view class='p-price-name'> {{amount || 0}}
                 <text>BCH</text>
             </view>
-            <view> ≈¥392934.00
+            <view> ≈¥5004.00
                 <text>RMB</text>
             </view>
         </view>
@@ -31,7 +31,7 @@
             <view class='p-price-name'> {{amount || 0}}
                 <text>BCH</text>
             </view>
-            <view> ≈392934.00
+            <view> ≈403.20
                 <text>RMB</text>
             </view>
         </view>

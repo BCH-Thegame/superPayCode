@@ -19,7 +19,7 @@
                 <view class='m-address-code'> {{address.address}} </view>
             </view>
         </view>
-        <view class='qrcode'>
+        <view class='qrcode' bindtap='copyAddress' >
             <canvas style="width:{{qrSize}}px;height:{{qrSize}}px" canvas-id="qrcodecav" />
         </view>
         <view class='m-copy-warp'>
@@ -30,8 +30,8 @@
 <block wx:else>
     <view class='c-creat'>
         <form bindsubmit='creatWallet'>
-            <input type='text' placeholder='请输入钱包名称' name="walletName"></input>
-            <button class='button' hover-class="button-touch" form-type='submit'>创建</button>
+            <input type='text' placeholder='please input wallet name' name="walletName"></input>
+            <button class='button' hover-class="button-touch" formType="submit">Creat Wallet</button>
         </form>
     </view>
 </block>
